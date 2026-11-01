@@ -4,3 +4,9 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
+
+configMapGenerator:
+  - name: nginx-config
+    literals:
+      - APP_ENV=development
+      - APP_NAME=KustomizeDemo
