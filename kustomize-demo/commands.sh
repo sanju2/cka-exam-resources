@@ -16,3 +16,10 @@ metadata:
   name: nginx-app
 spec:
   replicas: 3
+
+# config map
+configMapGenerator:
+  - name: nginx-config
+    literals:
+      - APP_ENV=development
+      - APP_NAME=KustomizeDemo
