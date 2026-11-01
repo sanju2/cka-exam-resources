@@ -1,3 +1,11 @@
+# Usefull commands
+kubectl kustomize base	## Build base
+kubectl kustomize overlays/dev	## Preview DEV
+kubectl apply -k overlays/dev	## Deploy DEV
+kubectl diff -k overlays/dev	## Preview cluster changes
+kubectl get -k overlays/dev	## View resources
+kubectl delete -k overlays/dev	## Delete DEV resources
+
 kustomize build k8s/ ## build kutomize configs
 
 kustomize build k8s/ | kubectl apply -f - ## apply kutomize
